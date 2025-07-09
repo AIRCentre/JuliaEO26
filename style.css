@@ -155,12 +155,12 @@ h2 {
 
 /* unvisited link */
 a:link {
-  color: #3e3e6b;
+  color: #191970;
 }
 
 /* visited link */
 a:visited {
-  color: #191970;
+  color: #3e3e6b;
 }
 
 /* mouse over link */
