@@ -34,7 +34,7 @@ html {
 }
 
 ::selection {
-  background: hsl(213, 90%, 51%);
+  background: #1478f2;
   text-shadow: none;
 }
 
