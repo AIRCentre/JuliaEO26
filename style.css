@@ -34,7 +34,7 @@ html {
 }
 
 ::selection {
-  background: #1478f2;
+  background: #0e4e9d;
   text-shadow: none;
 }
 
@@ -155,7 +155,7 @@ h2 {
 
 /* unvisited link */
 a:link {
-  color: #33CCFF;
+  color: #3aa4c7;
 }
 
 /* visited link */
