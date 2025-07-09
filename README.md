@@ -6,7 +6,7 @@ Place: **Terceira Island, Azores, Portugal**
 Please check the event [Website](https://aircentre.github.io/JuliaEO26/) for more information, including **registration** and **agenda**.
 
 Repo for resources:
- + [Website](https://aircentre.github.io/JuliaEO26/ "Up-to-date program")
+ + [Program](https://aircentre.github.io/JuliaEO26/ "Up-to-date program")
 
 ### Notebooks
 Notebooks will be made available within the *notebooks* folder, organised by session.
