@@ -1,0 +1,38 @@
+#!/usr/bin/env julia
+
+# ----- Imports
+using Statistics
+using Images
+using ImageView
+using ColorSchemes
+
+# ----- Functions
+
+# File I/O
+include("read_slc.jl")
+include("read_dem.jl")
+
+# Plotting
+include("plot_phase.jl")
+include("plot_amp.jl")
+include("brew_igram.jl")
+
+# ----- Read DEM data
+dem_name = "./data/hawaii.dem"
+dem_width = 3601
+dem_length = 4652
+dem = read_dem(dem_name, dem_length,dem_width)
+dem .= max.(dem, 0)
+img = colorview(Gray,dem./maximum(dem))
+save("./figs/dem.png", img)
+
+# ----- Read wrapped interferogams
+lambda=0.055165 # wavelength of Sentinel-1 (m)
+cm2rad=4*pi/lambda/100 # conversion from radians to cm
+width = 949
+length = 1011
+ifg_name = "./data/20221122_20221216.int"
+ifg = read_slc(ifg_name,length,width)
+plot_amp(ifg,"./figs/ifg_amp.png")
+plot_phase(ifg,"./figs/ifg_phase.png")
+
