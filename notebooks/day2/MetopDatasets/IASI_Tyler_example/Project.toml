@@ -1,0 +1,4 @@
+[deps]
+GLMakie = "e9467ef8-e4e7-5192-8a1a-b1aee30e663a"
+MetopDatasets = "0c26954c-4046-4b98-a13c-f9377ca4b9b7"
+Tyler = "e170d443-b9d6-418a-9ee8-061e966341ef"
