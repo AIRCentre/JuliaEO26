@@ -1,19 +1,27 @@
 
-# setup
+# Hands-On Examples
+
+- Author : Gaël Forget 
+- Date : 2026/01/09
+- Object : Live Demo
+
+<img width="150" height="100" alt="Image" src="https://github.com/user-attachments/assets/ab3e447a-6316-4126-8acf-21f7d0be5186" />
+
+## Setup
 
 ```
 import Pkg
 Pkg.activate(".")
 ```
 
-# get some polygons for plotting
+## Polygons for Plotting
 
 ```
 using MeshArrays, Shapefile, DataDeps
 pol=MeshArrays.Dataset("countries_shp1")
 ```
 
-# SurfaceDrifter
+## SurfaceDrifter
 
 ```
 using OceanRobots, CairoMakie
@@ -21,7 +29,7 @@ drifter=read(SurfaceDrifter(),1)
 plot(drifter,pol=pol)
 ```
 
-# ArgoFloat
+## ArgoFloat
 
 ```
 using OceanRobots, CairoMakie
@@ -30,7 +38,9 @@ argo=read(ArgoFloat(),wmo=2900668)
 plot(argo)
 ```
 
-# Drifters
+## Drifters
+
+### Simulation
 
 ```
 using Drifters, CairoMakie
@@ -40,6 +50,8 @@ I=Individuals(F,P.x0,P.y0);
 [solve!(I,P.T .+P.dT*(n-1)) for n in 1:P.nt]
 summary(I.🔴)
 ```
+
+### Plotting
 
 ```
 using MeshArrays, GeoJSON, DataDeps
@@ -52,7 +64,7 @@ LoopC=DriftersDataset(  data=(gdf=gdf,), options=options )
 plot(LoopC)
 ```
 
-# ClimateModels
+## ClimateModels
 
 ```
 using ClimateModels
@@ -72,9 +84,15 @@ readdir(MC)
 ### Oceananigans
 
 ```
+using Downloads
+url=""https://github.com/gaelforget/ClimateModels.jl/raw/refs/heads/master/examples/Oceananigans.jl"
+Downloads.download(url,"Oceananigans_Pluto.jl")
+
 using Pluto
-Pluto.activate_notebook_environment("examples/Oceananigans.jl")
-include("examples/Oceananigans.jl")
+Pluto.activate_notebook_environment("Oceananigans_Pluto.jl")
+
+import Pkg; Pkg.instantiate()
+include("Oceananigans_Pluto.jl")
 tz_fig
 ```
 
@@ -85,9 +103,7 @@ using Pluto
 Pluto.run()
 ```
 
-### copy and paste the URL into Pluto
-
-<https://raw.githubusercontent.com/JuliaOcean/OceanRobots.jl/master/examples/CPR_notebook.jl>
-
-### Hit Run and Let it Go
+- copy and paste thi [URL](https://raw.githubusercontent.com/JuliaOcean/OceanRobots.jl/master/examples/CPR_notebook.jl) into Pluto prompt
+- Click `Run`
+- Click `Run Notebook` 
 
