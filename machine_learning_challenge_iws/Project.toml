@@ -1,0 +1,9 @@
+[deps]
+CSV = "336ed68f-0bac-5ca0-87d4-7b16caf5d00b"
+DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
+ImageTransformations = "02fcd773-0e25-5acc-982a-7f6622650795"
+Images = "916415d5-f1e6-5110-898d-aaa5f9f070e0"
+Printf = "de0858da-6303-5e67-8744-51eddeeeb8d7"
+ProgressMeter = "92933f4c-e287-5a05-a399-4b506db050ca"
+PyCall = "438e738f-606a-5dbb-bf0a-cddfbfd45ab0"
+XGBoost = "009559a3-9522-5dbb-924b-0b6ed2b22bb9"
