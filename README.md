@@ -1,5 +1,6 @@
 # JuliaEO26
-     
+![Logo](assets/julia_eo_26_logo.png)
+
 ## Global Workshop on Earth Observation with Julia     
 Date: **5 to 9 Jan 2026**     
 Place: **Terceira Island, Azores, Portugal**
