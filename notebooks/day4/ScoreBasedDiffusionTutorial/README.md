@@ -77,7 +77,7 @@ Standard libraries:
 
 ## Installation
 
-1. **Install Julia** (version 1.9+ recommended)
+1. **Install Julia** (version 1.10 recommended)
 
 2. **Activate the project environment**:
 ```julia
